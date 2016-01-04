@@ -9,7 +9,6 @@ $this->title = 'Index';
 ?>
 <div>
     <?= Html::encode($model->name) ?>
-
 </div>
 
 

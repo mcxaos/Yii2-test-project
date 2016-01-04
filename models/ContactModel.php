@@ -5,12 +5,6 @@ use yii\base\Model;
 
 class ContactModel extends Model
 {
-    public $name;
+    public $name='my site';
 
-    public function attributeLabels()
-    {
-        return [
-            'name' => 'My site name'
-        ];
-    }
 }
