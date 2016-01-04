@@ -18,9 +18,16 @@ AppAsset::register($this);
         </head>
         <body class="main-body">
             <?php $this->beginBody() ?>
-            <header>хедер</header>
+
+            <header>
+                <?= $this->render('pageHeader') ?>
+            </header>
+
             <?= $content ?>
+
             <footer>футер</footer>
+
+
             <?php $this->endBody() ?>
         </body>
     </html>
