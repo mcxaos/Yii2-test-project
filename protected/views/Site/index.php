@@ -2,7 +2,7 @@
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
-$this->title = 'Index';
+$this->title = 'hot';
 ?>
 <div class="text-center">
     <span class="glyphicon glyphicon-cloud-upload"></span>
