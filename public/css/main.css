@@ -1,4 +1,14 @@
-.header
+.header .navbar
 {
-    color: red;
+    margin-bottom: 0px;
+}
+.main-content
+{
+    padding-top: 10px;
+    min-height: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    border: solid floralwhite 1px;
+    border-top: solid 0px;
 }

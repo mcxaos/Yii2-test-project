@@ -1,10 +1,8 @@
 <?php
-/* @var $model app\models\ContactForm */
-
 use yii\helpers\Html;
-$this->title = 'hot';
+$this->title = 'Home page';
 ?>
 <div class="text-center">
-    <span class="glyphicon glyphicon-cloud-upload"></span>
-    <?= Html::encode($model->name) ?>
+    <div class="h3">   <?= Html::encode($name) ?></div>
+    <div class="h3">Coming soon</div>
 </div>
