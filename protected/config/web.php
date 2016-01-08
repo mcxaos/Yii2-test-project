@@ -7,6 +7,12 @@ $config = [
     'name'=>'Web Store',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'controllerMap' => [
+        [
+            // объ€вл€ет "About" контроллер, использу€ название класса
+            'About' => 'app\controllers\AboutController',
+        ],
+    ],
     'components' => [
         'request' => [
             'baseUrl'=> '',
@@ -40,7 +46,12 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        'mycomponent' => [ 'class' => 'app\components\MyComponent', ],gi
+        'mycomponent' => [ 'class' => 'app\components\MyComponent', ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
+
     ],
     'params' => $params,
 ];
