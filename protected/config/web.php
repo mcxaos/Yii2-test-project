@@ -40,6 +40,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'mycomponent' => [ 'class' => 'app\components\MyComponent', ],gi
     ],
     'params' => $params,
 ];

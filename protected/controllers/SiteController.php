@@ -2,17 +2,15 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
 use app\models\ContactModel;
 
-class SiteController extends Controller
+class SiteController extends MainController
 {
-
 
     public function actionIndex()
     {
+      //Yii::$app->mycompoonent->welcome();
         $model = new ContactModel();
-
         return $this->render('index', [
             'model' => $model,
         ]);
