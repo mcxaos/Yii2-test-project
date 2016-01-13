@@ -583,6 +583,7 @@
                             name: $button.attr('name'),
                             value: $button.attr('value')
                         }).appendTo($form);
+                        $button.click();
                     } else {
                         $hiddenButton.attr('value', $button.attr('value'));
                     }

@@ -9,7 +9,6 @@ $config = [
     'bootstrap' => ['log'],
     'controllerMap' => [
         [
-            // объ€вл€ет "About" контроллер, использу€ название класса
             'About' => 'app\controllers\AboutController',
         ],
     ],
