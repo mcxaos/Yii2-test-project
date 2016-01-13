@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
+
 <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,7 +38,18 @@ use yii\helpers\Url;
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li><?= Html::a('About us', Url::toRoute(['/about',])); ?></li>
-                    <li><?= Html::a('Login', Url::toRoute(['/auth',])); ?></li>
+
+                    <?php if ($this->params['identity']===null): ?>
+                        <li><?= Html::a('Login', Url::toRoute(['/auth',])); ?></li>
+                    <?php else: ?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><?= Html::a('Profile', Url::toRoute(['/profile',])); ?></li>
+                                <li><?= Html::a('Logout', Url::toRoute(['/auth/logout',])); ?></li>
+                            </ul>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

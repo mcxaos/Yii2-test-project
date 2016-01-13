@@ -8,6 +8,10 @@ class AuthController extends MainController
 {
     public function actionIndex()
     {
+        if($this->identity)
+        {
+            return $this->redirect('/profile');
+        }
         $model = new AuthForm();
         $post=Yii::$app->request->post();
         if($model->load($post)){
@@ -18,10 +22,22 @@ class AuthController extends MainController
             }
             if(!$user){
                 return $this->render('index', ['model' => $model]);
+            }else{
+                return $this->redirect('/profile');
             }
         }else
         {
             return $this->render('index', ['model' => $model]);
+        }
+    }
+    public function actionLogout()
+    {
+        if(Yii::$app->user->logout()){
+            $this->identity=null;
+            return $this->redirect('/profile');
+        }
+        else{
+            return $this->redirect('/profile');
         }
     }
 }
