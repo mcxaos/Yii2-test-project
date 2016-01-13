@@ -45,7 +45,7 @@ use yii\helpers\Url;
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><?= Html::a('Profile', Url::toRoute(['/profile',])); ?></li>
+                                <li><?= Html::a('Edit profile', Url::toRoute(['/profile',])); ?></li>
                                 <li><?= Html::a('Logout', Url::toRoute(['/auth/logout',])); ?></li>
                             </ul>
                         </li>
