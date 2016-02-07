@@ -9,6 +9,9 @@ use yii\web\IdentityInterface;
 class User extends ActiveRecord  implements IdentityInterface
 
 {
+    const ROLE_USER = 'USER';
+    const ROLE_MODERATOR = 'MODERATOR';
+    const ROLE_ADMINISTRATOR = 'ADMINISTRATOR';
 
     /**
      * @return string название таблицы, сопоставленной с этим ActiveRecord-классом.
@@ -34,7 +37,15 @@ class User extends ActiveRecord  implements IdentityInterface
             ['password', 'string', 'min' => 6],
         ];
     }
-
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'User name',
+            'email' => 'User email address',
+            'role' => 'User role',
+            'active' => 'User active',
+        ];
+    }
 
     /** INCLUDE USER username VALIDATION FUNCTIONS**/
     /**

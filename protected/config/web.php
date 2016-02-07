@@ -9,7 +9,7 @@ $config = [
     'bootstrap' => ['log'],
     'controllerMap' => [
         [
-            'About' => 'app\controllers\AboutController',
+
         ],
     ],
     'components' => [
@@ -24,6 +24,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl'=>['/auth/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -45,10 +46,13 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        'mycomponent' => [ 'class' => 'app\components\MyComponent', ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+        ],
+        'authManager' => [
+            'defaultRoles' => ['ADMINISTRATOR', 'MODERATOR', 'USER'],
+            'class' => 'yii\rbac\PhpManager',
         ],
 
     ],
