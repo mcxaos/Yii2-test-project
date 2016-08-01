@@ -1,1 +1,1 @@
-My first web application on Yii2
+Trying to build project that will be  imitate some web store
