@@ -1,7 +1,7 @@
 {
     "name": "Web store",
-    "description": "First project on Yii2 ",
-    "keywords": ["yii2", "framework", "basic", "project template"],
+    "description": "Web store",
+    "keywords": ["yii2"],
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
@@ -16,7 +16,9 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-mpdf": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -4,14 +4,14 @@ namespace app\models;
 use yii;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-
+use yii\data\ActiveDataProvider;
 
 class User extends ActiveRecord  implements IdentityInterface
 
 {
-    const ROLE_USER = 'USER';
-    const ROLE_MODERATOR = 'MODERATOR';
-    const ROLE_ADMINISTRATOR = 'ADMINISTRATOR';
+    const ROLE_USER =0;
+    const ROLE_MODERATOR = 1;
+    const ROLE_ADMINISTRATOR = 2;
 
     /**
      * @return string название таблицы, сопоставленной с этим ActiveRecord-классом.
@@ -135,14 +135,7 @@ class User extends ActiveRecord  implements IdentityInterface
      */
     public function validatePassword($password)
     {
-       // return $this->password === Yii::$app->getSecurity()->generatePasswordHash($password);
-        if($this->password===$password) {
-            return true;
-        }
-        else {
-            return false;
-        }
-
+        return Yii::$app->getSecurity()->validatePassword($password, $this->password);
     }
 
     /**
@@ -152,8 +145,7 @@ class User extends ActiveRecord  implements IdentityInterface
      */
     public function setPassword($password)
     {
-       // $this->password = Yii::$app->getSecurity()->generatePasswordHash($password);
-        $this->password =$password;
+        $this->password = Yii::$app->getSecurity()->generatePasswordHash($password);
     }
 
     /**
@@ -178,5 +170,41 @@ class User extends ActiveRecord  implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getRoleList()
+    {
+        return [
+            self::ROLE_USER => 'User',
+            self::ROLE_ADMINISTRATOR => 'Administrator',
+            self::ROLE_MODERATOR => 'Moderator',
+        ];
+    }
+
+    /**
+     * @return string
+     */
+    public function getRoleLabel()
+    {
+        return static::getRoleList()[$this->role];
+    }
+
+    public function search($params)
+    {
+        $role=Yii::$app->user->identity->role;
+        $query=self::find()->where('role <'.$role);
+        $userParams=$params['User'];
+        if($userParams!=null){
+            foreach ($userParams as $key=>$value) {
+                $query->andWhere(['like', $key,$value]);
+            }
+        }
+        return new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => ['pageSize' => 10, ],
+        ]);
     }
 }

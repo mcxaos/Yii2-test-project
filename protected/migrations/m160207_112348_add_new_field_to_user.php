@@ -9,7 +9,7 @@ class m160207_112348_add_new_field_to_user extends Migration
 {
     public function up()
     {
-        $this->addColumn('{{%user}}', 'role', $this->string(20)->defaultValue(User::ROLE_USER));
+        $this->addColumn('{{%user}}', 'role', $this->integer(2)->defaultValue(User::ROLE_USER));
         $this->addDefaultUsers();
     }
 
@@ -37,11 +37,6 @@ class m160207_112348_add_new_field_to_user extends Migration
                     $newUser->save();
                 }
             }
-
         }
-
-
     }
-
-
 }

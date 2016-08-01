@@ -29,3 +29,20 @@
     margin-right: auto;
     max-width:400px;
 }
+.dashboard-users
+{
+    padding: 0px 10px;
+
+}
+.dashboard-users  *
+{
+    text-align: center;
+}
+.dashboard-users .grid-view .table-bordered
+{
+    border:solid 2px rgba(0, 0, 0, 0.54);
+}
+.dashboard-users .grid-view .table-bordered *
+{
+    border-color: rgba(0, 0, 0, 0.20);
+}

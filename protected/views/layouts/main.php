@@ -6,6 +6,8 @@ use yii\helpers\Html;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+
+//$this->params['identity'];
 ?>
 <?php $this->beginPage() ?>
 
