@@ -9,13 +9,13 @@ class m160207_112348_add_new_field_to_user extends Migration
 {
     public function up()
     {
-        $this->addColumn('{{%user}}', 'role', $this->integer(2)->defaultValue(User::ROLE_USER));
+        $this->addColumn('{{%User}}', 'role', $this->integer(2)->defaultValue(User::ROLE_USER));
         $this->addDefaultUsers();
     }
 
     public function down()
     {
-        $this->dropColumn('{{%user}}', 'field');
+        $this->dropColumn('{{%User}}', 'field');
     }
     private function addDefaultUsers()
     {

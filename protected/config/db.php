@@ -1,9 +1,18 @@
 <?php
-
+/*
+ mysql
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=web',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
+];
+*/
+return [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'pgsql:host=localhost;port=5432;dbname=postgres',
+    'username'=>'postgres',
+    'password'=>'postgres',
+    'charset'=>'UTF8',
 ];

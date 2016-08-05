@@ -3,8 +3,8 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'first',
-    'name'=>'Web Store',
+    'id' => '1',
+    'name'=>'Yii2 test',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerMap' => [
@@ -16,7 +16,7 @@ $config = [
         'request' => [
             'baseUrl'=> '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'ddfsdfsdfsfsfwee213e',
+            'cookieValidationKey' => 'test 11112133331',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -51,16 +51,13 @@ $config = [
             'showScriptName' => false,
         ],
         'authManager' => [
-            'defaultRoles' => ['ADMINISTRATOR', 'MODERATOR', 'USER'],
             'class' => 'yii\rbac\PhpManager',
         ],
 
     ],
     'params' => $params,
     'modules' => [
-        'gridview' =>  [
-            'class' => '\kartik\grid\Module'
-            ],
+
         ],
 ];
 

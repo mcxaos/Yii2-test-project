@@ -1,1 +1,1 @@
-Trying to build project that will be  imitate some web store
+Testing yii2

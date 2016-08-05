@@ -198,151 +198,6 @@
         ]
     },
     {
-        "name": "swiftmailer/swiftmailer",
-        "version": "v5.4.1",
-        "version_normalized": "5.4.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/swiftmailer/swiftmailer.git",
-            "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-            "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "mockery/mockery": "~0.9.1,<0.9.4"
-        },
-        "time": "2015-06-06 14:19:39",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "lib/swift_required.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Chris Corbyn"
-            },
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            }
-        ],
-        "description": "Swiftmailer, free feature-rich PHP mailer",
-        "homepage": "http://swiftmailer.org",
-        "keywords": [
-            "email",
-            "mail",
-            "mailer"
-        ]
-    },
-    {
-        "name": "phpspec/php-diff",
-        "version": "v1.0.2",
-        "version_normalized": "1.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/phpspec/php-diff.git",
-            "reference": "30e103d19519fe678ae64a60d77884ef3d71b28a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/phpspec/php-diff/zipball/30e103d19519fe678ae64a60d77884ef3d71b28a",
-            "reference": "30e103d19519fe678ae64a60d77884ef3d71b28a",
-            "shasum": ""
-        },
-        "time": "2013-11-01 13:02:21",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Diff": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Chris Boulton",
-                "homepage": "http://github.com/chrisboulton",
-                "role": "Original developer"
-            }
-        ],
-        "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays)."
-    },
-    {
-        "name": "fzaninotto/faker",
-        "version": "v1.5.0",
-        "version_normalized": "1.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/fzaninotto/Faker.git",
-            "reference": "d0190b156bcca848d401fb80f31f504f37141c8d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d0190b156bcca848d401fb80f31f504f37141c8d",
-            "reference": "d0190b156bcca848d401fb80f31f504f37141c8d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0",
-            "squizlabs/php_codesniffer": "~1.5"
-        },
-        "suggest": {
-            "ext-intl": "*"
-        },
-        "time": "2015-05-29 06:29:14",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.5.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Faker\\": "src/Faker/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "François Zaninotto"
-            }
-        ],
-        "description": "Faker is a PHP library that generates fake data for you.",
-        "keywords": [
-            "data",
-            "faker",
-            "fixtures"
-        ]
-    },
-    {
         "name": "yiisoft/yii2-faker",
         "version": "2.0.3",
         "version_normalized": "2.0.3.0",
@@ -941,196 +796,148 @@
         ]
     },
     {
-        "name": "kartik-v/yii2-krajee-base",
-        "version": "1.8.2",
-        "version_normalized": "1.8.2.0",
+        "name": "fzaninotto/faker",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-            "reference": "0c274e31e4392cbafc5fe158eae81738794e02ce"
+            "url": "https://github.com/fzaninotto/Faker.git",
+            "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/0c274e31e4392cbafc5fe158eae81738794e02ce",
-            "reference": "0c274e31e4392cbafc5fe158eae81738794e02ce",
+            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+            "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
             "shasum": ""
         },
         "require": {
-            "yiisoft/yii2-bootstrap": "@dev"
+            "php": "^5.3.3|^7.0"
         },
-        "time": "2016-01-10 12:26:29",
-        "type": "yii2-extension",
+        "require-dev": {
+            "ext-intl": "*",
+            "phpunit/phpunit": "~4.0",
+            "squizlabs/php_codesniffer": "~1.5"
+        },
+        "time": "2016-04-29 12:21:54",
+        "type": "library",
+        "extra": {
+            "branch-alias": []
+        },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "kartik\\base\\": ""
+                "Faker\\": "src/Faker/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD-3-Clause"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
+                "name": "François Zaninotto"
             }
         ],
-        "description": "Base library and foundation components for all Yii2 Krajee extensions.",
-        "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+        "description": "Faker is a PHP library that generates fake data for you.",
         "keywords": [
-            "base",
-            "extension",
-            "foundation",
-            "krajee",
-            "widget",
-            "yii2"
+            "data",
+            "faker",
+            "fixtures"
         ]
     },
     {
-        "name": "kartik-v/yii2-grid",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "swiftmailer/swiftmailer",
+        "version": "v5.4.3",
+        "version_normalized": "5.4.3.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/kartik-v/yii2-grid.git",
-            "reference": "e4a33f62ff43bca27a7604516039e0aa3977c069"
+            "url": "https://github.com/swiftmailer/swiftmailer.git",
+            "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/e4a33f62ff43bca27a7604516039e0aa3977c069",
-            "reference": "e4a33f62ff43bca27a7604516039e0aa3977c069",
+            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
+            "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
             "shasum": ""
         },
         "require": {
-            "kartik-v/yii2-krajee-base": "~1.7"
+            "php": ">=5.3.3"
         },
-        "time": "2016-03-18 19:28:34",
-        "type": "yii2-extension",
+        "require-dev": {
+            "mockery/mockery": "~0.9.1"
+        },
+        "time": "2016-07-08 11:51:25",
+        "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.1.x-dev"
+                "dev-master": "5.4-dev"
             }
         },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "kartik\\grid\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
-            }
-        ],
-        "description": "Yii 2 GridView on steroids. Various enhancements and utilities for the Yii 2.0 GridView widget.",
-        "homepage": "https://github.com/kartik-v/yii2-grid",
-        "keywords": [
-            "extension",
-            "grid",
-            "widget",
-            "yii2"
-        ]
-    },
-    {
-        "name": "kartik-v/mpdf",
-        "version": "v1.0.2",
-        "version_normalized": "1.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/mpdf.git",
-            "reference": "6ab0ae3a82673e514f168c8e6da02289e6d95f2c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/mpdf/zipball/6ab0ae3a82673e514f168c8e6da02289e6d95f2c",
-            "reference": "6ab0ae3a82673e514f168c8e6da02289e6d95f2c",
-            "shasum": ""
-        },
-        "require": {
-            "ext-mbstring": "*",
-            "php": ">=4.3.10"
-        },
-        "time": "2015-05-05 07:34:49",
-        "type": "library",
         "installation-source": "dist",
         "autoload": {
-            "classmap": [
-                "mpdf.php",
-                "classes"
+            "files": [
+                "lib/swift_required.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-1.0+"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Ian N Back"
+                "name": "Chris Corbyn"
+            },
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
             }
         ],
-        "description": "A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support. This is a fork of the official mPDF library.",
-        "homepage": "http://www.mpdf1.com/mpdf/index.php",
+        "description": "Swiftmailer, free feature-rich PHP mailer",
+        "homepage": "http://swiftmailer.org",
         "keywords": [
-            "pdf",
-            "php",
-            "utf-8"
+            "email",
+            "mail",
+            "mailer"
         ]
     },
     {
-        "name": "kartik-v/yii2-mpdf",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "phpspec/php-diff",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/kartik-v/yii2-mpdf.git",
-            "reference": "873a4f10ba961bbf3c63c9ede82a13d407f00acf"
+            "url": "https://github.com/phpspec/php-diff.git",
+            "reference": "0464787bfa7cd13576c5a1e318709768798bec6a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-mpdf/zipball/873a4f10ba961bbf3c63c9ede82a13d407f00acf",
-            "reference": "873a4f10ba961bbf3c63c9ede82a13d407f00acf",
+            "url": "https://api.github.com/repos/phpspec/php-diff/zipball/0464787bfa7cd13576c5a1e318709768798bec6a",
+            "reference": "0464787bfa7cd13576c5a1e318709768798bec6a",
             "shasum": ""
         },
-        "require": {
-            "kartik-v/mpdf": "*"
+        "time": "2016-04-07 12:29:16",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
         },
-        "time": "2015-12-03 14:15:23",
-        "type": "yii2-extension",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
-            "psr-4": {
-                "kartik\\mpdf\\": ""
+            "psr-0": {
+                "Diff": "lib/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD 3-Clause"
+            "BSD-3-Clause"
         ],
         "authors": [
             {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
+                "name": "Chris Boulton",
+                "homepage": "http://github.com/chrisboulton"
             }
         ],
-        "description": "A Yii2 wrapper component for the mPDF library which generates PDF files from UTF-8 encoded HTML.",
-        "homepage": "https://github.com/kartik-v/yii2-mpdf",
-        "keywords": [
-            "component",
-            "extension",
-            "html",
-            "mpdf",
-            "pdf",
-            "utf8",
-            "yii2"
-        ]
+        "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays)."
     }
 ]

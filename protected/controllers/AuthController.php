@@ -32,12 +32,8 @@ class AuthController extends MainController
     }
     public function actionLogout()
     {
-        if(Yii::$app->user->logout()){
-            $this->identity=null;
-            return $this->redirect('/profile');
-        }
-        else{
-            return $this->redirect('/profile');
-        }
+        Yii::$app->user->logout();
+        $this->identity=null;
+        return $this->redirect('/profile');
     }
 }
