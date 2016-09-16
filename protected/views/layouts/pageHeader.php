@@ -5,7 +5,7 @@ use yii\helpers\Url;
 $identity=$this->params['identity'];
 ?>
 <?php
-if($identity!=null && in_array($identity->role,[\app\models\user::ROLE_ADMINISTRATOR,\app\models\user::ROLE_MODERATOR])){
+if($identity!=null && in_array($identity->getRoleLevel(),[\app\models\role::ROLE_ADMINISTRATOR,\app\models\role::ROLE_MODERATOR])){
     $dashboard=true;
 }else{
     $dashboard=false;

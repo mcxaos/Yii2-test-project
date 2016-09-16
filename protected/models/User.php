@@ -7,18 +7,14 @@ use yii\web\IdentityInterface;
 use yii\data\ActiveDataProvider;
 
 class User extends ActiveRecord  implements IdentityInterface
-
 {
-    const ROLE_USER =0;
-    const ROLE_MODERATOR = 1;
-    const ROLE_ADMINISTRATOR = 2;
-
+  
     /**
      * @return string название таблицы, сопоставленной с этим ActiveRecord-классом.
      */
     public static function tableName()
     {
-        return 'User';
+        return 'Users';
     }
 
     public function rules()
@@ -42,7 +38,6 @@ class User extends ActiveRecord  implements IdentityInterface
         return [
             'username' => 'User name',
             'email' => 'User email address',
-            'role' => 'User role',
             'active' => 'User active',
         ];
     }
@@ -65,12 +60,7 @@ class User extends ActiveRecord  implements IdentityInterface
         return static::findOne(['access_token' => $token]);
     }
 
-    /* removed
-        public static function findIdentityByAccessToken($token)
-        {
-            throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-        }
-    */
+
     /**
      * Finds user by username
      *
@@ -175,31 +165,32 @@ class User extends ActiveRecord  implements IdentityInterface
     /**
      * @return array
      */
-    public static function getRoleList()
+    public  function getRole()
     {
-        return [
-            self::ROLE_USER => 'User',
-            self::ROLE_ADMINISTRATOR => 'Administrator',
-            self::ROLE_MODERATOR => 'Moderator',
-        ];
+        $userId=$this->getPrimaryKey();
+        $userRole=UserRole::findRole($userId);
+        $role= Role::findIdentity($userRole->getRoleId());
+        return $role;
+        
     }
 
-    /**
-     * @return string
-     */
-    public function getRoleLabel()
+    public function getRoleLevel()
     {
-        return static::getRoleList()[$this->role];
+        return $this->getRole()->level;
     }
+
 
     public function search($params)
     {
-        $role=Yii::$app->user->identity->role;
-        $query=self::find()->where('role <'.$role);
-        $userParams=$params['User'];
-        if($userParams!=null){
-            foreach ($userParams as $key=>$value) {
-                $query->andWhere(['like', $key,$value]);
+       
+        $query=self::find()->where('');
+      
+        if($params!=null){
+            $userParams=$params['User'];
+            if($userParams!=null){
+                foreach ($userParams as $key=>$value) {
+                    $query->andWhere(['like', $key,$value]);
+                }
             }
         }
         return new ActiveDataProvider([

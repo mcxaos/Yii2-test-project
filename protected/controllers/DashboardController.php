@@ -2,6 +2,7 @@
 namespace app\controllers;
 
 use app\models\User;
+use app\models\Role;
 use Yii;
 use yii\data\ActiveDataProvider;
 class DashboardController  extends MainController
@@ -11,8 +12,8 @@ class DashboardController  extends MainController
     {
 
         parent::init(); // Call parent implementation;
-        $this->role = $this->identity->role;
-        if ( !in_array($this->role,[user::ROLE_ADMINISTRATOR,user::ROLE_MODERATOR])) {
+        $this->role = $this->identity->getRoleLevel();
+        if ( !in_array($this->role,[Role::ROLE_ADMINISTRATOR,Role::ROLE_MODERATOR])) {
             throw new \yii\web\HttpException(404,'Page not found');
         }
     }
@@ -23,5 +24,10 @@ class DashboardController  extends MainController
             return $this->render('index',['dataProvider'=>$dataProvider, 'searchModel'=>$searchModel]);
 
     }
+
+    public function actionViev($id=0)
+    {
+        echo $id;
+    }   
 
 }

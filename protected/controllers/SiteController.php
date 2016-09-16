@@ -2,13 +2,14 @@
 namespace app\controllers;
 
 use Yii;
-
+use app\models\User;
 
 class SiteController extends MainController
 {
     public function actionIndex()
     {
         $name=Yii::$app->name;
+
         return $this->render('index', [
             'name' => $name,
         ]);
@@ -20,5 +21,11 @@ class SiteController extends MainController
             Yii::$app->response->statusCode=$exception->statusCode;
             return $this->render('error', ['exception' => $exception]);
         }
+    }
+    public function actionTest($id=0)
+    {
+        $this->identity->getRole();    
+         
+
     }
 }

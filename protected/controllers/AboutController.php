@@ -10,4 +10,5 @@ class AboutController extends MainController
     {
         return $this->render('index');
     }
+  
 }

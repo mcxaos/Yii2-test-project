@@ -13,12 +13,7 @@ $this->title = 'Dashboard';
             'id',
             'username:ntext',
             'email:Email',
-            [
-                'attribute' => 'role',
-                'value' => function ($model) {
-                    return $model->getRoleLabel();
-                },
-            ],
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
